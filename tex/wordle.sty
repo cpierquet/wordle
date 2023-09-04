@@ -3,7 +3,8 @@
 % Inspiration....: https://tex.stackexchange.com/questions/659860/wordle-like-colored-letter-boxes-in-latex
 
 \NeedsTeXFormat{LaTeX2e}
-\ProvidesPackage{wordle}[2023/07/12 v0.1.0 Wordle grid]
+\ProvidesPackage{wordle}[2023/09/03 v0.1.1 Wordle grid]
+% 0.1.1		Coorection d'un bug sur la version anglaise
 % 0.1.0		Version initiale + quelques modèles
 
 %------Packages utiles
@@ -282,7 +283,7 @@
 		{
 			\int_zero:N \l_letter_int
 			\prop_set_eq:NN \l_word_prop \l_wordle_prop
-			\tl_map_function:nN {##1} \count_letters_in_wordle:n
+			\tl_map_function:nN {##1} \count_letters_in_word:n
 			\int_zero:N \l_letter_int
 			\tl_map_function:nN {##1} \write_letters_in_wordle:n
 			\par
